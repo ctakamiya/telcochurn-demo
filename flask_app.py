@@ -128,8 +128,9 @@ def default():
 
 
 
-HTML("<a href='https://{}.{}'>Open Table View</a>".format(os.environ['CDSW_ENGINE_ID'],os.environ['CDSW_DOMAIN']))
+HTML("<a href='https://modelservice.{}.{}'>Open Table View</a>".format(os.environ['CDSW_ENGINE_ID'],os.environ['CDSW_DOMAIN']))
 
 
 if __name__=="__main__":
-    app.run(host='127.0.0.1', port=int(os.environ['CDSW_READONLY_PORT']))
+    app.run(host='127.0.0.1', port=int(os.environ['CDSW_APP_PORT']))
+
